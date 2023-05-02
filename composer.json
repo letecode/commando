@@ -1,7 +1,7 @@
 {
     "name": "letecode/commando",
     "description": "This package is a collection of artisan commands for speed up development with laravel.",
-    "type": "composer-plugin",
+    "type": "library",
     "require": {
         "php": "^7.2|^8.0.2",
         "illuminate/support": "^7.0|^8.0|^9.0|^10"
