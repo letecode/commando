@@ -2,8 +2,6 @@
 
 namespace Letecode\Commando\Commands\Files;
 
-
-use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 
 class CreateClass extends BaseCommand

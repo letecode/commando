@@ -12,6 +12,13 @@
             "Letecode\\Commando\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Letecode\\Commando\\CommandoServiceProvider"
+            ]
+        }
+    },
     "authors": [
         {
             "name": "Jean Claude Mbiya",

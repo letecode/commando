@@ -1,8 +1,6 @@
 <?php
 
- namespace Letecode\Commando\Commands\Files;
-
-use Illuminate\Console\Command;
+namespace Letecode\Commando\Commands\Files;
 
 class CreateLang extends BaseCommand
 {
