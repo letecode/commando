@@ -3,8 +3,8 @@
     "description": "This package is a collection of artisan commands for speed up development with laravel.",
     "type": "composer-plugin",
     "require": {
-        "php": ">= 7.0.0",
-        "laravel/framework": ">= 5.5.0"
+        "php": "^8.0",
+        "laravel/framework": "^9.0"
     },
     "license": "MIT",
     "autoload": {

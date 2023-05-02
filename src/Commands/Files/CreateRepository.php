@@ -56,6 +56,7 @@ class CreateRepository extends BaseCommand
      *
      * @param $filename
      * @param $content
+     * @return void
      */
     protected function putInFile($filename, $content)
     {
