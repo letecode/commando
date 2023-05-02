@@ -7,14 +7,9 @@ use Illuminate\Support\ServiceProvider;
 class CommandoServiceProvider extends ServiceProvider
 {
     /**
-     * Register services.
-     *
-     * @return void
+     * Commando Config file path
      */
-    public function register()
-    {
-        //
-    }
+    const CONFIG_PATH = __DIR__ . '/../config/commando.php';
 
     /**
      * Bootstrap services.
@@ -22,6 +17,18 @@ class CommandoServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
+    {
+        $this->publishes([
+            self::CONFIG_PATH => config_path('commando.php'),
+        ], 'config');
+    }
+
+     /**
+     * Register services.
+     *
+     * @return void
+     */
+    public function register()
     {
         //
     }
