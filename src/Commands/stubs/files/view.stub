@@ -1,0 +1,5 @@
+@extends('Layout')
+
+@section('content')
+    {{-- View content --}}
+@endsection

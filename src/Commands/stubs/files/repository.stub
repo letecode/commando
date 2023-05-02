@@ -1,0 +1,138 @@
+<?php
+
+namespace App\Repositories;
+
+use DummyModelNamespace\DummyModel;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+
+class DummyClass
+{
+    /**
+     * The DummyModel model.
+     *
+     * @var DummyModel
+     */
+    protected $DummyProperty;
+
+    /**
+     * DummyClass constructor.
+     *
+     * @param DummyModel|null $DummyProperty
+     */
+    public function __construct(DummyModel $DummyProperty = null)
+    {
+        $this->DummyProperty = $DummyProperty ?? new DummyModel();
+    }
+
+    /**
+     * Retrieve a specified DummyProperty from database by id.
+     *
+     * @param $id
+     * @return DummyModel
+     */
+    public function getById($id)
+    {
+        return $this->DummyProperty->findOrFail($id);
+    }
+
+    /**
+     * Retrieve all DummyProperty from database.
+     *
+     * @return Collection|static[]
+     */
+    public function getAll()
+    {
+        return $this->DummyProperty->all();
+    }
+
+    /**
+     * Get a list of DummyProperty by pagination.
+     *
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    public function getPaginate($n = 15)
+    {
+        return $this->DummyProperty->paginate($n);
+    }
+
+    /**
+     * Check if an instance exists according to a given value.
+     *
+     * @return bool
+     */
+    public function exists($field, $value, $condition = '=')
+    {
+        return $this->DummyProperty->where($field, $condition, $value)->exists();
+    }
+
+    /**
+     * Retrieve a DummyProperty from database by a field according to a given value.
+     *
+     * @return DummyModel
+     */
+    public function get($field, $value, $condition = '=')
+    {
+        return $this->DummyProperty->where($field, $condition, $value)->firstOrFail();
+    }
+
+    /**
+     * Retrieve a listing of DummyProperty from database according to constraints by pagination.
+     *
+     * @param array $constraints
+     * @param int $n
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    public function getListByPagination(array $constraints, $n = 30)
+    {
+        return $this->DummyProperty->where($constraints)->paginate($n);
+    }
+
+    /**
+     * Retrieve a listing of DummyProperty from database according to constraints.
+     *
+     * @param array $constraints
+     * @return Collection|static[]
+     */
+    public function getList(array $constraints)
+    {
+        return $this->DummyProperty->where($constraints)->get();
+    }
+
+    /**
+     * Store a new DummyProperty in the database.
+     *
+     * @param array $inputs
+     * @return DummyModel
+     */
+    public function store(array $inputs)
+    {
+        return $this->DummyProperty->create($inputs);
+    }
+
+    /**
+     * Update a DummyProperty
+     *
+     * @return DummyModel
+     */
+    public function update(array $inputs, $id)
+    {
+        $instance = $this->getById($id);
+        foreach($inputs as $property => $value)
+            $instance->$property = $value;
+        $instance->save();
+        return $this->getById($id);
+    }
+
+    /**
+     * Remove a DummyProperty from database.
+     *
+     * @return void
+     */
+    public function delete($id)
+    {
+        $this->getById($id)->delete();
+    }
+
+    
+}
