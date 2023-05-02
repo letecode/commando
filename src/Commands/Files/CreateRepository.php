@@ -38,7 +38,7 @@ class CreateRepository extends BaseCommand
      */
     protected function getStub()
     {
-        return file_get_contents(__DIR__.'/stubs/files/repository.stub');
+        return file_get_contents(__DIR__.'/../stubs/files/repository.stub');
     }
 
     /**
@@ -48,7 +48,7 @@ class CreateRepository extends BaseCommand
      */
     protected function getEmptyStub()
     {
-        return file_get_contents(__DIR__.'/stubs/files/empty.repository.stub');
+        return file_get_contents(__DIR__.'/../stubs/files/empty.repository.stub');
     }
 
     /**
@@ -120,10 +120,10 @@ class CreateRepository extends BaseCommand
 
                 if (file_exists($filename)) {
                     do {
-                        $input = $this->ask("There is a repository with this name ($name) do you want to replace it ? [o/n] ");
-                    } while (strtolower($input) != 'o' && strtolower($input) != 'n');
+                        $input = $this->ask("There is a repository with this name ($name) do you want to replace it ? [y/n] ");
+                    } while (strtolower($input) != 'y' && strtolower($input) != 'n');
 
-                    if('o' == strtolower($input)){
+                    if('y' == strtolower($input)){
                         $this->putInFile($filename, $content);
                         $this->info('Reporitory created successfully.');
                     }

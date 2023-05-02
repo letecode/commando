@@ -39,7 +39,7 @@ class CreateFile extends BaseCommand
     {
         if ($this->isCorrectFilename($this->argument('filename'))) {
             $extension = $this->getExtension();
-            $path = base_path(str_replace('.', '/', $this->argument('filename')).'.'.$extension);
+            $path = base_path(str_replace(['.', "\\", "\\\\"], '/', $this->argument('filename')).'.'.$extension);
 
             if ($this->replaceExistingFile($path, 'There is already a file with this name do you want to replace it ? [y/n]')) {
                 $filename = explode('.', $this->argument('filename'));

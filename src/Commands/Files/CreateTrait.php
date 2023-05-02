@@ -11,7 +11,7 @@ class CreateTrait extends BaseCommand
      *
      * @var string
      */
-    protected $signature = 'make:class {filename}
+    protected $signature = 'make:trait {filename}
                             {--separator=\\ : Character used to separate file and its parent(s) folder(s).}';
 
     /**
@@ -48,7 +48,7 @@ class CreateTrait extends BaseCommand
                     : explode('\\', $this->argument('filename'));
 
                 $this->createFoldersIfNecessary($filename);
-                $stub = file_get_contents(__DIR__.'/stubs/files/trait.stub');
+                $stub = file_get_contents(__DIR__.'/../stubs/files/trait.stub');
                 $stub = $this->replaceDummyName('Trait', $filename[count($filename) - 1], $stub);
                 $namespace = '';
 

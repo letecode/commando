@@ -35,7 +35,7 @@ class CreateService extends BaseCommand
      */
     protected function getEmptyStub()
     {
-        return file_get_contents(__DIR__.'/stubs/files/empty.service.stub');
+        return file_get_contents(__DIR__.'/../stubs/files/empty.service.stub');
     }
 
 

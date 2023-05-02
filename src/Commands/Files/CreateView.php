@@ -37,7 +37,7 @@ class CreateView extends Command
      */
     protected function getStub()
     {
-        return file_get_contents(__DIR__.'/stubs/files/view.stub');
+        return file_get_contents(__DIR__.'/../stubs/files/view.stub');
     }
 
     /**

@@ -59,7 +59,7 @@ class CreateLang extends BaseCommand
      */
     protected function getStub()
     {
-        return file_get_contents(__DIR__.'/stubs/files/lang.stub');
+        return file_get_contents(__DIR__.'/../stubs/files/lang.stub');
     }
 
     /**

@@ -12,7 +12,6 @@ class CreateClass extends BaseCommand
      * @var string
      */
     protected $signature = 'make:class {filename}
-                            {--type=class : This option accept either "class"(default) or "trait" or "interface" value.}
                             {--separator=\\ : Character used to separate file and its parent(s) folder(s).}';
 
     /**
@@ -48,7 +47,7 @@ class CreateClass extends BaseCommand
                     : explode('\\', $this->argument('filename'));
 
                 $this->createFoldersIfNecessary($filename);
-                $stub = file_get_contents(__DIR__.'/stubs/files/class.stub');
+                $stub = file_get_contents(__DIR__.'/../stubs/files/class.stub');
                 $stub = $this->replaceDummyName('Class', $filename[count($filename) - 1], $stub);
                 $namespace = '';
 

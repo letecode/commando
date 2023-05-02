@@ -11,7 +11,7 @@ class CreateInterface extends BaseCommand
      *
      * @var string
      */
-    protected $signature = 'make:class {filename}
+    protected $signature = 'make:interface {filename}
                             {--separator=\\ : Character used to separate file and its parent(s) folder(s).}';
 
     /**
@@ -48,7 +48,7 @@ class CreateInterface extends BaseCommand
                     : explode('\\', $this->argument('filename'));
 
                 $this->createFoldersIfNecessary($filename);
-                $stub = file_get_contents(__DIR__.'/stubs/files/interface.stub');
+                $stub = file_get_contents(__DIR__.'/../stubs/files/interface.stub');
                 $stub = $this->replaceDummyName('Interface', $filename[count($filename) - 1], $stub);
                 $namespace = '';
 
