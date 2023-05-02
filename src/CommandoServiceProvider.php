@@ -30,6 +30,9 @@ class CommandoServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->mergeConfigFrom(
+            self::CONFIG_PATH,
+            'commando'
+        );
     }
 }
