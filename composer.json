@@ -1,0 +1,22 @@
+{
+    "name": "letecode/commando",
+    "description": "This package is a collection of artisan commands for speed up development with laravel.",
+    "type": "composer-plugin",
+    "require": {
+        "php": ">= 7.0.0",
+        "laravel/framework": ">= 5.5.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Letecode\\Commando\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jean Claude Mbiya",
+            "email": "mbiyajeanclaude@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
