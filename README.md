@@ -2,6 +2,8 @@
 
 This package is a collection of artisan commands for speed up development with laravel.
 
+Letecode/commando support Laravel 6, 7, 8, 9 and 10
+
 ## Installation
 
 Use the package manager [composer](https://getcomposer.org/) to install letecode/commando
