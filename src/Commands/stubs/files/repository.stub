@@ -20,7 +20,7 @@ class DummyClass
      *
      * @param DummyModel|null $DummyProperty
      */
-    public function __construct(DummyModel $DummyProperty = null)
+    public function __construct(?DummyModel $DummyProperty = null)
     {
         $this->DummyProperty = $DummyProperty ?? new DummyModel();
     }
